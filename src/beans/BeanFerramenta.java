@@ -30,10 +30,7 @@ public class BeanFerramenta {
 		this.senha = senha;
 	}
 
-	@Override
-	public String toString() {
-		return "BeanFerramenta [login=" + login + ", senha=" + senha + "]";
-	}
+	
 	
 	
 	

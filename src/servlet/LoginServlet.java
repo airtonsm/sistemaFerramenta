@@ -10,11 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import beans.BeanFerramenta;
+import dao.DaoLogin;
 
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private DaoLogin daoLogin = new DaoLogin();
        
  
     public LoginServlet() {
@@ -31,12 +34,13 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		
-		BeanFerramenta beanFerramenta = new BeanFerramenta();
+			
+		try {
 		
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
 		
-		if(beanFerramenta.validarLoginSenha(login, senha)) {
+		if(daoLogin.validarLogin(login, senha)) {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("menuSistema.jsp");
 			dispatcher.forward(request, response);
 		}else {
@@ -44,6 +48,10 @@ public class LoginServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 			
 		}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		}
 	}
 
-}
+
