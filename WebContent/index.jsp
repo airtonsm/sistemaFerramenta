@@ -20,7 +20,7 @@
 		<br><input type="text" id="senha" name="senha"><br>
 		
 		<br><input type="submit" value="logar"><br>
-		<a href="usuarioCadastro.jsp">Cadastrar Usuário</a>
+		<a href="cadastroUsuario.jsp">Cadastrar Usuário</a>
 
 	</form>
 

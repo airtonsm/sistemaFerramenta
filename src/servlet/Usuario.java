@@ -42,7 +42,9 @@ public class Usuario extends HttpServlet {
 		usuario.setSenha(senha);
 		
 		daoUsuario.salvar(usuario);
-		
+
+		RequestDispatcher dispatcher = request.getRequestDispatcher("cadastroUsuario.jsp");
+		dispatcher.forward(request, response);
 		
 	}
 

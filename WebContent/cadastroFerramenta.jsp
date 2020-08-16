@@ -9,7 +9,7 @@
 <body>
 <h1>Cadastro de Ferramentas para manutençao</h1>
 
-<form>
+<form action="salvarEquipamento" method="post">
 	Ordem de serviço:
 	<input type="text" id="os" name="os"><br><br>
 	Descrição
@@ -18,6 +18,8 @@
 	<input type="text" id="tecnico" name="tecnico"><br><br>
 	Data:
 	<input type="text" id="data" name="data"><br><br>
+	
+	<input type="submit" value="cadastrar">
 </form>
 
 </body>
