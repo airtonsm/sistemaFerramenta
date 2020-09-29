@@ -1,26 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Cadastro de Ferramentas</title>
-</head>
-<body>
-<h1>Cadastro de Ferramentas para manutençao</h1>
+  <head>
+    <meta charset="ISO-8859-1" />
+    <title>Cadastro de Ferramentas</title>
+    <link rel="stylesheet" href="./WEB-INF//css/global.css" />
+  </head>
+  <body>
+    <h1>Cadastro de Ferramentas para manutenï¿½ao</h1>
 
-<form action="salvarEquipamento" method="post">
-	Ordem de serviço:
-	<input type="text" id="os" name="os"><br><br>
-	Descrição
-	<input type="text" id="descricao" name="descricao"><br><br>
-	Técnico:
-	<input type="text" id="tecnico" name="tecnico"><br><br>
-	Data:
-	<input type="text" id="data" name="data"><br><br>
-	
-	<input type="submit" value="cadastrar">
-</form>
+    <form action="salvarEquipamento" method="post">
+      Ordem de serviï¿½o:
+      <input type="text" id="os" name="os" /><br /><br />
+      Descriï¿½ï¿½o
+      <input type="text" id="descricao" name="descricao" /><br /><br />
+      Tï¿½cnico:
+      <input type="text" id="tecnico" name="tecnico" /><br /><br />
+      Data:
+      <input type="text" id="data" name="data" /><br /><br />
 
-</body>
+      <input type="submit" value="cadastrar" />
+    </form>
+  </body>
 </html>
