@@ -1,24 +1,45 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Manutenção Ferramenta</title>
-</head>
-<body>
-<h1>Manutenção Ferramentas</h1>
+  <head>
+    <meta charset="ISO-8859-1" />
+    <title>Manutenï¿½ï¿½o Ferramenta</title>
+    <link rel="stylesheet" href="./WEB-INF//css/global.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="container">
+        <h1>Manutenï¿½ï¿½o Ferramentas</h1>
 
-<form>
-	Ordem de serviço:
-	<input type="text" id="os" name="os"><br><br>
-	Descrição
-	<input type="text" id="descricao" name="descricao"><br><br>
-	Técnico:
-	<input type="text" id="tecnico" name="tecnico"><br><br>
-	Data:
-	<input type="text" id="data" name="data"><br><br>
-</form>
+        <form>
+          <input
+            placeholder="Ordem de serviÃ§o"
+            class="inputs"
+            type="text"
+            id="os"
+            name="os"
+          /><br /><br />
 
-</body>
+          <input
+            placeholder="DescriÃ§Ã£o"
+            class="inputs"
+            type="text"
+            id="descricao"
+            name="descricao"
+          /><br /><br />
+
+          <input
+            placeholder="TÃ©cnico"
+            class="inputs"
+            type="text"
+            id="tecnico"
+            name="tecnico"
+          /><br /><br />
+
+          <input class="inputs" type="date" id="data" name="data" /><br /><br />
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

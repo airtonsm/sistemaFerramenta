@@ -1,26 +1,51 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Cadastro de Ferramentas</title>
-</head>
-<body>
-<h1>Cadastro de Ferramentas para manutençao</h1>
+  <head>
+    <meta charset="ISO-8859-1" />
+    <title>Cadastro de Ferramentas</title>
+    <link rel="stylesheet" href="./WEB-INF//css/global.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="container">
+        <h1 class="title">Cadastro de Ferramentas para manutenï¿½ao</h1>
+        <form action="salvarEquipamento" method="post">
+          <input
+            placeholder="Ordem de serviÃ§o"
+            class="inputs"
+            type="text"
+            id="os"
+            name="os"
+          /><br /><br />
 
-<form action="salvarEquipamento" method="post">
-	Ordem de serviço:
-	<input type="text" id="os" name="os"><br><br>
-	Descrição
-	<input type="text" id="descricao" name="descricao"><br><br>
-	Técnico:
-	<input type="text" id="tecnico" name="tecnico"><br><br>
-	Data:
-	<input type="text" id="data" name="data"><br><br>
-	
-	<input type="submit" value="cadastrar">
-</form>
+          <input
+            placeholder="DescriÃ§Ã£o"
+            class="inputs"
+            type="text"
+            id="descricao"
+            name="descricao"
+          /><br /><br />
 
-</body>
+          <input
+            placeholder="TÃ©cnico"
+            class="inputs"
+            type="text"
+            id="tecnico"
+            name="tecnico"
+          /><br /><br />
+          <input
+            placeholder="Data"
+            class="inputs"
+            type="date"
+            id="data"
+            name="data"
+          /><br /><br />
+
+          <input class="submit" type="submit" value="cadastrar" />
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

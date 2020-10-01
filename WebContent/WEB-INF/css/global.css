@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(119, 187, 219);
+}
+
+.container {
+  width: 80%;
+  height: 50vh;
+  background-color: rgb(252, 252, 252);
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+.pagInicial {
+  width: 40%;
+  height: 50vh;
+  background-color: rgb(252, 252, 252);
+  align-items: center;
+  border-radius: 20px;
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.links {
+  align-items: center;
+  text-decoration: none;
+  padding: 20px;
+}
+
+a {
+  font: 700 1rem Roboto;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 10px;
+  color: black;
+}
+#sign-up {
+  color: rgb(213, 214, 214);
+  text-decoration: none;
+  transition: 1s;
+}
+#sign-up:hover {
+  color: rgb(67, 68, 68);
+  text-decoration: none;
+}
+#sign-in {
+  text-decoration: none;
+}
+
+.lineSpan {
+  display: inline-block;
+  border-bottom: 2px solid rgb(119, 187, 219);
+  padding-bottom: 2px;
+}
+
+.inputs {
+  background-color: rgba(221, 221, 221, 0.199);
+  border: none;
+  border-radius: 9px;
+  width: 400px;
+  height: 40px;
+  outline: 0;
+  resize: vertical;
+  padding: 1.2rem 1.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.452);
+  transition: 0.4s;
+}
+
+.inputs:focus {
+  width: 410px;
+  border: 2px solid rgb(119, 187, 219);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+.title {
+  font: 700 1.2rem 'JetBrains mono';
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.submit {
+  border: 1px solid rgb(119, 187, 219);
+  width: 400px;
+  height: 40px;
+  border-radius: 8px;
+  font: 700 0.9rem 'JetBrains mono';
+  background-color: rgba(119, 187, 219, 0.822);
+  color: white;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.submit:hover {
+  background-color: rgb(91, 143, 167);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+.form {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  height: 100px;
+  display: flex;
+  width: 100%;
+  background-color: rgb(243, 243, 243);
+  border-radius: 20px;
+  font: 700 1rem Roboto;
+  box-shadow: inset 0 4px 20px rgba(63, 63, 63, 0.055);
+  align-items: center;
+  justify-content: center;
+}
+
+.forgotPassword {
+  color: rgb(86, 161, 196);
+  text-decoration: none;
+  transition: 0.8s;
+}
+.forgotPassword:hover {
+  color: rgb(102, 193, 235);
+}
+.linksMenuSistema {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20%;
+}
+
+#menuPrincipal {
+  text-decoration: none;
+  color: rgb(85, 84, 84);
+}
+
+#menuPrincipal:hover {
+  color: rgb(34, 34, 34);
+}
