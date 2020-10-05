@@ -7,7 +7,7 @@ prefix="c"%>
   <head>
     <meta charset="ISO-8859-1" />
     <title>SCF</title>
-    <link rel="stylesheet" href="./WEB-INF//css/global.css" />
+    <link rel="stylesheet" href="css/global.css" />
   </head>
   <body>
     <div class="background">

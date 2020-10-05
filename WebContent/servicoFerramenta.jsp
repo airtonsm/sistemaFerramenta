@@ -3,14 +3,14 @@ pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="ISO-8859-1" />
-    <title>Manutenï¿½ï¿½o Ferramenta</title>
-    <link rel="stylesheet" href="./WEB-INF//css/global.css" />
+    <meta charset="UTF-8" />
+    <title>Manutenção Ferramenta</title>
+    <link rel="stylesheet" href="css/global.css" />
   </head>
   <body>
     <div class="background">
       <div class="container">
-        <h1>Manutenï¿½ï¿½o Ferramentas</h1>
+        <h1>Manutenção Ferramentas</h1>
 
         <form>
           <input
