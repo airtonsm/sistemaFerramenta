@@ -4,8 +4,8 @@ prefix="c"%>
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="ISO-8859-1" />
-    <title>Cadastro UsuÃ¡rio</title>
+    <meta charset="UTF-8" />
+    <title>Cadastro Usuário</title>
     <link rel="stylesheet" href="css/global.css" />
   </head>
   <body>

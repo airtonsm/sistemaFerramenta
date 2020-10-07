@@ -10,34 +10,17 @@ pageEncoding="ISO-8859-1"%>
   <body>
     <div class="background">
       <div class="container">
-        <h1>Manutenção Ferramentas</h1>
+        <h1>Pesquisar Ferramenta</h1></br></br>
 
         <form>
           <input
-            placeholder="Ordem de serviÃ§o"
+            placeholder="Ordem de serviço"
             class="inputs"
             type="text"
             id="os"
             name="os"
           /><br /><br />
-
-          <input
-            placeholder="DescriÃ§Ã£o"
-            class="inputs"
-            type="text"
-            id="descricao"
-            name="descricao"
-          /><br /><br />
-
-          <input
-            placeholder="TÃ©cnico"
-            class="inputs"
-            type="text"
-            id="tecnico"
-            name="tecnico"
-          /><br /><br />
-
-          <input class="inputs" type="date" id="data" name="data" /><br /><br />
+                  
         </form>
       </div>
     </div>
