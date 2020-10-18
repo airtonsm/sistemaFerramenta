@@ -11,13 +11,6 @@ prefix="c"%>
   <body>
     <div class="background">
       <div class="container">
-        <div class="links">
-          <a id="sign-up" href="cadastroUsuario.jsp">SIGN IN</a>
-          <a id="sign-in" href="cadastroUsuario.jsp"
-            ><span class="lineSpan">SIGN UP</span></a
-          >
-        </div>
-
         <form action="salvarUsuario" method="post">
           <input
             class="inputs"
@@ -25,6 +18,7 @@ prefix="c"%>
             type="text"
             name="login"
             id="login"
+            value="${user.login}"
           /><br /><br />
 
           <input
@@ -33,17 +27,8 @@ prefix="c"%>
             type="password"
             name="senha"
             id="senha"
+            value="${user.senha}"
           /><br /><br />
-          <input
-            class="inputs"
-            placeholder="Confirmar Senha"
-            type="password"
-            name="senha"
-            id="senha"
-          /><br /><br />
-          <!-- A questão de confirmar a senha parece ser algo complexo mas não é, e tem diversas possibilidades para fazer isso um exemplo é 
-            guardar os dois valores em variáveis diferentes, fazer um if(senha1 === senha2) se for true vai criar uma variável com o nome 
-            correctPassword por exemplo e utiliza ela  -->
 
           <input class="submit" type="submit" value="CADASTAR" />
         </form>

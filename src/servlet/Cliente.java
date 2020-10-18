@@ -14,7 +14,7 @@ import beans.BeanCliente;
 import dao.DaoCliente;
 
 
-@WebServlet("/salvarCliente")
+@WebServlet("/Cliente")
 public class Cliente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	

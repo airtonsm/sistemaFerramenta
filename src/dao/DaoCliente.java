@@ -17,7 +17,7 @@ public class DaoCliente {
 	
 	public void salvar(BeanCliente cliente) {
 		try {
-			String sql = "insert into cliente (nome, contato, endereco, cpf) values (?,?,?,?)";
+			String sql = "insert into cliente(nome, contato, endereco, cpf) values(?,?,?,?)";
 			PreparedStatement insert = connection.prepareStatement(sql);
 			insert.setString(1, cliente.getNome());
 			insert.setString(2, cliente.getContato());

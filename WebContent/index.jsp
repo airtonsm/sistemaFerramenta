@@ -12,11 +12,10 @@ prefix="c"%>
   <body>
     <div class="background">
       <div class="container">
-        <div class="links">
-          <a id="sign-in" href="cadastroUsuario.jsp"
-            ><span class="lineSpan">SIGN IN</span></a
+        <div class="links">            
+            <span class="lineSpan"></span></a
           >
-          <a id="sign-up" href="cadastroUsuario.jsp">SIGN UP</a>
+         
         </div>
 
         <form class="form" action="LoginServlet" method="post">
@@ -39,7 +38,7 @@ prefix="c"%>
           <br /><input class="submit" type="submit" value="LOGAR" /><br />
         </form>
         <footer>
-          <a class="forgotPassword" href="#">Forgot Password?</a>
+          <a id="sign-up" href="cadastroUsuario.jsp">Cadastrar novo usuário</a>
         </footer>
       </div>
     </div>

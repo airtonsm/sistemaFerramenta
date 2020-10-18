@@ -13,7 +13,7 @@ prefix="c"%>
 <div class="background">
       <div class="container">
       
-        <form action="salvarCliente" method="post">
+        <form action="Cliente" method="post">
           <input
             class="inputs"
             placeholder="Nome do cliente"
