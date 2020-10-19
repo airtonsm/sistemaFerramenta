@@ -24,7 +24,7 @@ public class DaoCliente {
 			insert.setString(3, cliente.getEndereco());
 			insert.setString(4, cliente.getCpf());
 			insert.execute();
-			connection.commit();			
+			connection.commit();		
 		} catch (Exception e) {
 			try {
 				connection.rollback();

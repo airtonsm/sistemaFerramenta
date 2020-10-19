@@ -6,8 +6,15 @@ public class BeanEquipamento {
 	private String descricao;
 	private String tecnico;
 	private String data;
+	private String codCliente;
 	
+	public void setCodCliente(String codCliente) {
+		this.codCliente = codCliente;
+	}
 	
+	public String getCodCliente() {
+		return codCliente;
+	}	
 	
 	public String getOs() {
 		return os;

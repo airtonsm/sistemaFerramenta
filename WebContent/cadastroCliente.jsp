@@ -1,25 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core"
+pageEncoding="ISO-8859-1"%> <%@ taglib uri="http://java.sun.com/jsp/jstl/core"
 prefix="c"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Cadastro Cliente</title>
- <link rel="stylesheet" href="css/global.css" />
-</head>
-<body>
-<div class="background">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastro Usuário</title>
+    <link rel="stylesheet" href="css/global.css" />
+  </head>
+  <body>
+    <div class="background">
       <div class="container">
-      
         <form action="Cliente" method="post">
           <input
             class="inputs"
-            placeholder="Nome do cliente"
+            placeholder="Nome do Cliente"
             type="text"
-            name="login"
+            name="nome"
             id="nome"
+            value="${user.nome}"
           /><br /><br />
 
           <input
@@ -28,6 +27,7 @@ prefix="c"%>
             type="text"
             name="contato"
             id="contato"
+            value="${user.contato}"
           /><br /><br />
           
           <input
@@ -36,20 +36,21 @@ prefix="c"%>
             type="text"
             name="endereco"
             id="endereco"
+            value="${user.endereco}"
           /><br /><br />
           
-         <input type="text" 
-         class="inputs"
-         name="cpf" 
-         placeholder="CPF" 
-         maxlength="14" 
-         OnKeyPress="formatar('###.###.###-##', this)"/>
-         <br /><br />
-          
-          <input class="submit" type="submit" value="cadastrar"/>
+          <input
+            class="inputs"
+            placeholder="cpf"
+            type="text"
+            name="cpf"
+            id="cpf"
+            value="${user.cpf}"
+          /><br /><br />
+
+          <input class="submit" type="submit" value="CADASTRAR" />
         </form>
       </div>
     </div>
-
-</body>
+  </body>
 </html>

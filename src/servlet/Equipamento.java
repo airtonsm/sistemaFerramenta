@@ -1,7 +1,7 @@
 package servlet;
 
 import java.io.IOException;
-import java.sql.Connection;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import beans.BeanEquipamento;
 import dao.DaoEquipamento;
+
 
 
 @WebServlet("/salvarEquipamento")
@@ -37,6 +38,7 @@ public class Equipamento extends HttpServlet {
 		String descricao = request.getParameter("descricao");
 		String tecnico = request.getParameter("tecnico");
 		String data = request.getParameter("data");
+		String codCliente = request.getParameter("codCliente");
 		
 		BeanEquipamento equipamento = new BeanEquipamento();
 		
@@ -44,6 +46,7 @@ public class Equipamento extends HttpServlet {
 		equipamento.setDescricao(descricao);
 		equipamento.setTecnico(tecnico);
 		equipamento.setData(data);
+		equipamento.setCodCliente(codCliente);
 		
 	
 		daoEquipamento.salvar(equipamento);

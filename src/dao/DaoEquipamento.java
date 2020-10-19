@@ -20,12 +20,13 @@ public class DaoEquipamento {
 	
 	public void salvar(BeanEquipamento equip) {
 		try {
-		String sql = "insert into equipamento(os, descricao, tecnico, data) values (?, ?, ?, ?)";
+		String sql = "insert into equipamento(os, descricao, tecnico, data, codCliente) values (?, ?, ?, ?, ?)";
 		PreparedStatement insert = connection.prepareStatement(sql);
 		insert.setString(1, equip.getOs());
 		insert.setString(2, equip.getDescricao());
 		insert.setString(3, equip.getTecnico());
 		insert.setString(4, equip.getData());
+		insert.setString(5, equip.getCodCliente());
 		insert.execute();
 		connection.commit();
 		}catch (Exception e) {
@@ -50,7 +51,9 @@ public class DaoEquipamento {
 			equip.setOs(resultSet.getString("os"));
 			equip.setDescricao(resultSet.getNString("descricao"));
 			equip.setTecnico(resultSet.getString("tecnico"));
-			equip.setData(resultSet.getString("data"));			
+			equip.setData(resultSet.getString("data"));
+			equip.setCodCliente(resultSet.getString("codCliente"));
+			
 			
 			list.add(equip);
 		}
