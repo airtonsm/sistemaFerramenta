@@ -26,8 +26,9 @@ public class DaoCliente {
 			insert.execute();
 			connection.commit();		
 		} catch (Exception e) {
-			try {
-				connection.rollback();
+			e.printStackTrace();
+			try {				
+				connection.rollback();				
 			} catch (SQLException e1) {
 				e1.printStackTrace();
 			}

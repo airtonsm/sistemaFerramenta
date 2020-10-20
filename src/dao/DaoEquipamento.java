@@ -20,7 +20,7 @@ public class DaoEquipamento {
 	
 	public void salvar(BeanEquipamento equip) {
 		try {
-		String sql = "insert into equipamento(os, descricao, tecnico, data, codCliente) values (?, ?, ?, ?, ?)";
+		String sql = "insert into equipamento(os, descricao, tecnico,codCliente) values (?, ?, ?, ?, ?)";
 		PreparedStatement insert = connection.prepareStatement(sql);
 		insert.setString(1, equip.getOs());
 		insert.setString(2, equip.getDescricao());
