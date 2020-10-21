@@ -13,8 +13,7 @@ prefix="c"%>
     <div class="background">
       <div class="container">
         <div class="links">            
-            <span class="lineSpan"></span></a
-          >
+            <span class="lineSpan"></span>
          
         </div>
 

@@ -2,20 +2,15 @@ package beans;
 
 public class BeanEquipamento {
 	
+	private int id_cliente;
 	private String os;
 	private String descricao;
-	private String tecnico;
-	private String data;
-	private String codCliente;
-	
-	public void setCodCliente(String codCliente) {
-		this.codCliente = codCliente;
+	public int getId_cliente() {
+		return id_cliente;
 	}
-	
-	public String getCodCliente() {
-		return codCliente;
-	}	
-	
+	public void setId_cliente(int id_cliente) {
+		this.id_cliente = id_cliente;
+	}
 	public String getOs() {
 		return os;
 	}
@@ -28,19 +23,7 @@ public class BeanEquipamento {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public String getTecnico() {
-		return tecnico;
-	}
-	public void setTecnico(String tecnico) {
-		this.tecnico = tecnico;
-	}
-	public String getData() {
-		return data;
-	}
-	public void setData(String data) {
-		this.data = data;
-	}
 	
 	
-
+	
 }

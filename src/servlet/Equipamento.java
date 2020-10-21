@@ -34,25 +34,21 @@ public class Equipamento extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);		
 		
+		String id_cliente = request.getParameter("id_cliente");
 		String os = request.getParameter("os");
 		String descricao = request.getParameter("descricao");
-		String tecnico = request.getParameter("tecnico");
-		String data = request.getParameter("data");
-		String codCliente = request.getParameter("codCliente");
+
 		
 		BeanEquipamento equipamento = new BeanEquipamento();
 		
+		equipamento.setId_cliente(Integer.valueOf(id_cliente));;
 		equipamento.setOs(os);
 		equipamento.setDescricao(descricao);
-		equipamento.setTecnico(tecnico);
-		equipamento.setData(data);
-		equipamento.setCodCliente(codCliente);
 		
-	
 		daoEquipamento.salvar(equipamento);
 		
 		RequestDispatcher view = request.getRequestDispatcher("cadastroFerramenta.jsp");		
-		view.forward(request, response);		
+		view.forward(request, response);
 		
 	}
 

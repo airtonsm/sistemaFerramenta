@@ -14,42 +14,28 @@ pageEncoding="ISO-8859-1"%>
         <h1 class="title">Cadastro de Ferramentas para manutenção</h1>
         <form action="salvarEquipamento" method="post">
           <input
-            placeholder="Ordem de serviço"
+            placeholder="Id do cliente"
+            class="inputs"
+            type="number"
+            id="id_cliente"
+            name="id_cliente"
+          /><br /><br />
+
+          <input
+            placeholder="Os"
             class="inputs"
             type="text"
             id="os"
             name="os"
-             value="${user.os}"
-          /><br /><br />
-
-          <input
-            placeholder="Descrição"
-            class="inputs"
-            type="text"
-            id="descricao"
-            name="descricao"
-             value="${user.descrição}"
           /><br /><br />
           
            <input
-            placeholder="Técnico"
+            placeholder="Descrição do equipamento"
             class="inputs"
             type="text"
-            id="tecnico"
-            name="tecnico"
-            value="${user.tecnico}"                         
-          /><br /><br />
-          
-          <input
-            placeholder="Código do Cliente"
-            class="inputs"
-            type="text"
-            id="codCliente"
-            name="codCliente"
-            value="${user.codCliente}"                         
-          /><br /><br />
-          
-          
+            id="descricao"
+            name="descricao"                        
+          /><br /><br />             
 
           <input class="submit" type="submit" value="cadastrar" />
           <br /><br />

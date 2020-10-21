@@ -20,16 +20,15 @@ public class DaoEquipamento {
 	
 	public void salvar(BeanEquipamento equip) {
 		try {
-		String sql = "insert into equipamento(os, descricao, tecnico,codCliente) values (?, ?, ?, ?, ?)";
+		String sql = "insert into equipamento(id_cliente, os,descricao) values (?, ?, ?)";
 		PreparedStatement insert = connection.prepareStatement(sql);
-		insert.setString(1, equip.getOs());
-		insert.setString(2, equip.getDescricao());
-		insert.setString(3, equip.getTecnico());
-		insert.setString(4, equip.getData());
-		insert.setString(5, equip.getCodCliente());
+		insert.setInt(1, equip.getId_cliente());
+		insert.setString(2, equip.getOs());
+		insert.setString(3, equip.getDescricao());
 		insert.execute();
 		connection.commit();
 		}catch (Exception e) {
+			e.printStackTrace();
 			try {
 				connection.rollback();
 			} catch (SQLException e1) {
@@ -38,28 +37,29 @@ public class DaoEquipamento {
 		}
 	}
 	
-	public List<BeanEquipamento> consultar(String os) throws Exception{	
+	public List<BeanEquipamento> consultar(String os) throws Exception {
+			
+		List<BeanEquipamento> consultar = new ArrayList<BeanEquipamento>();
 		
-		List<BeanEquipamento> list = new ArrayList<BeanEquipamento>();
+		String sql = "select * from equipamento where os = '" +  os + "'";
 		
-		String sql = "select * from equipamento where = '" + os + "'";
 		PreparedStatement statement = connection.prepareStatement(sql);
 		ResultSet resultSet = statement.executeQuery();
 		
-		while(resultSet.next()) {				
-			BeanEquipamento equip = new BeanEquipamento();
-			equip.setOs(resultSet.getString("os"));
-			equip.setDescricao(resultSet.getNString("descricao"));
-			equip.setTecnico(resultSet.getString("tecnico"));
-			equip.setData(resultSet.getString("data"));
-			equip.setCodCliente(resultSet.getString("codCliente"));
+		while(resultSet.next()) {
+			BeanEquipamento beanEquipamento = new BeanEquipamento();
+			beanEquipamento.setOs(resultSet.getString("os"));
+			beanEquipamento.setId_cliente(resultSet.getInt("id_cliente"));
+			beanEquipamento.setDescricao(resultSet.getString("descricao"));
 			
-			
-			list.add(equip);
+			consultar.add(beanEquipamento);			
 		}
 		
-		return list;
+		return consultar;
+		
+		
 		
 	}
+
 
 }
