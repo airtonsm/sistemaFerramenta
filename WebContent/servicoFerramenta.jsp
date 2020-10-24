@@ -6,7 +6,7 @@ pageEncoding="ISO-8859-1"%>
   <head>
     <meta charset="UTF-8" />
     <title>Manutenção Ferramenta</title>
-    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/manutencao.css" />
   </head>
   <body>
     <div class="background">
@@ -23,8 +23,16 @@ pageEncoding="ISO-8859-1"%>
             name="os"
           /><br /><br />                  
         </form>
+
+       <div style="text-align:center;">
+        <table class="responsive-table" class="center">
         
-        <table>
+        <tr>
+        	<th>Nome Cliente</th> 
+        	<th>Ordem de Serviço</th>
+        	<th>Descrição Ferramenta</th>
+        	
+        </tr>
         
         <c:forEach items="${equipamento}" var="user">
         <tr>
@@ -33,11 +41,9 @@ pageEncoding="ISO-8859-1"%>
         	<td><c:out value="${user.descricao}"></c:out></td>
         </tr>
         </c:forEach>
-        
+ 
         </table>
-        
-        
-        
+        </div>  
       </div>
     </div>
   </body>

@@ -1,0 +1,85 @@
+@charset "ISO-8859-1";
+
+body {
+  position: center;
+}
+
+.responsive-table {
+    width: 80%;
+    margin-bottom: 1.5em;
+    border-spacing: 0;
+    border: 1px solid rgba(29, 150, 178, 1);
+    
+}
+
+thead {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+th {
+    background-color: rgba(29, 150, 178, 1);
+    border: 1px solid rgba(29, 150, 178, 1);
+    font-weight: normal;
+    text-align: center;
+    color: white;
+}
+
+th[scope="row"] {
+    background-color: rgba(29, 150, 178, 1);
+    color: white;
+
+}
+
+caption {
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+tr {
+    margin-bottom: 1em;
+
+}
+
+td {
+    text-align: center;
+}
+
+.color-td {
+    border: 1px solid rgba(29, 150, 178, 1);
+}
+
+.inputs {
+  background-color: rgba(221, 221, 221, 0.199);
+  border: none;
+  border-radius: 9px;
+  width: 400px;
+  height: 40px;
+  outline: 0;
+  resize: vertical;
+  padding: 1.2rem 1.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.452);
+  transition: 0.4s;
+}
+
+.inputs:focus {
+  width: 410px;
+  border: 2px solid rgb(119, 187, 219);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.title {
+  font: 700 1.2rem 'JetBrains mono';
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
+
