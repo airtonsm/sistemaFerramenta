@@ -41,7 +41,11 @@ public class DaoEquipamento {
 			
 		List<BeanEquipamento> consultar = new ArrayList<BeanEquipamento>();
 		
-		String sql = "select * from equipamento where os = '" +  os + "'";
+		String sql = "select cliente.nome, equipamento.os, equipamento.descricao"
+				+ " from equipamento"
+				+ " inner join cliente"
+				+ " ON equipamento.id_cliente = cliente.id_cliente"
+				+ " where equipamento.os = '" + os + "'";
 		
 		PreparedStatement statement = connection.prepareStatement(sql);
 		ResultSet resultSet = statement.executeQuery();
@@ -49,10 +53,10 @@ public class DaoEquipamento {
 		while(resultSet.next()) {
 			BeanEquipamento beanEquipamento = new BeanEquipamento();
 			beanEquipamento.setOs(resultSet.getString("os"));
-			beanEquipamento.setId_cliente(resultSet.getInt("id_cliente"));
+			beanEquipamento.setNome(resultSet.getString("nome"));
 			beanEquipamento.setDescricao(resultSet.getString("descricao"));
 			
-			consultar.add(beanEquipamento);			
+			consultar.add(beanEquipamento);		
 		}
 		
 		return consultar;

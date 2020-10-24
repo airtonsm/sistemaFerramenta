@@ -36,7 +36,7 @@ pageEncoding="ISO-8859-1"%>
         
         <c:forEach items="${equipamento}" var="user">
         <tr>
-        	<td><c:out value="${user.id_cliente}"></c:out></td>
+        	<td><c:out value="${user.nome}"></c:out></td>
         	<td><c:out value="${user.os}"></c:out></td>
         	<td><c:out value="${user.descricao}"></c:out></td>
         </tr>

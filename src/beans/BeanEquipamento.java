@@ -1,10 +1,19 @@
 package beans;
 
-public class BeanEquipamento {
+public class BeanEquipamento extends BeanCliente {
 	
 	private int id_cliente;
 	private String os;
 	private String descricao;
+	private String nome;
+	
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 	public int getId_cliente() {
 		return id_cliente;
 	}
