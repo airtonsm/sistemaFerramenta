@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import beans.BeanFerramenta;
@@ -32,6 +33,20 @@ public class DaoUsuario {
 			}
 		}
 				
+	}
+	
+	public boolean validarLogin(String login) throws Exception{
+		String sql = "select count(1) as qtd from usuario where login  = '" + login + "'";
+		
+		PreparedStatement preparedStatement = connection.prepareStatement(sql);
+		ResultSet resultSet =  preparedStatement.executeQuery();
+		
+		if(resultSet.next()) {					
+			
+			return resultSet.getInt("qtd") <=0;
+		}
+		
+		return false;
 	}
 
 }
