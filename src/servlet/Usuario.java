@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -31,7 +32,8 @@ public class Usuario extends HttpServlet {
 	}
 
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {		
 		
 		String id = request.getParameter("id");
 		String login = request.getParameter("login");
@@ -39,22 +41,22 @@ public class Usuario extends HttpServlet {
 		
 		BeanFerramenta usuario = new BeanFerramenta();
 		
-		usuario.setId(!id.isEmpty() ? Long.parseLong(id) : 0);
+		/*usuario.setId(!id.isEmpty() ? Long.parseLong(id) : 0);*/
 		usuario.setLogin(login);
 		usuario.setSenha(senha);
 		
 		try {
 
-			if (id == null || id.isEmpty() && !daoUsuario.validarLogin(login)) {
-				request.setAttribute("msg", "Login já cadastradato!!");
- 
+			if (!daoUsuario.validarLogin(login)) {
+				request.setAttribute("msg", "Usuário já cadastrada!!"); 
+				PrintWriter out = response.getWriter();
+
+						
 			}
-			if (id == null || id.isEmpty() && daoUsuario.validarLogin(login)) {
+			if (daoUsuario.validarLogin(login)) {
 				daoUsuario.salvar(usuario);
 				request.setAttribute("msg", "Usuário cadastrado com sucesso!!!");
 			}
-		
-		daoUsuario.salvar(usuario);
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("cadastroUsuario.jsp");
 		dispatcher.forward(request, response);
