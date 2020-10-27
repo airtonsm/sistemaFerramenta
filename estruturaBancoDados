@@ -1,0 +1,51 @@
+
+/*Banco de dados criado do PostgreSQL*/
+
+CREATE DATABASE sistemaferramenta;
+
+USE sistemaferramenta;
+
+CREATE TABLE public.cliente
+(
+  id_cliente integer NOT NULL DEFAULT nextval('cliente_id_cliente_seq'::regclass),
+  nome character varying(50) NOT NULL,
+  contato character varying(50) NOT NULL,
+  endereco character varying(50) NOT NULL,
+  cpf character varying(11) NOT NULL,
+  CONSTRAINT cliente_pkey PRIMARY KEY (id_cliente)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.cliente
+  OWNER TO postgres;
+  
+  CREATE TABLE public.equipamento
+(
+  id_equipamento integer NOT NULL DEFAULT nextval('equipamento_id_seq'::regclass),
+  id_cliente integer NOT NULL,
+  os character varying(8) NOT NULL,
+  descricao character varying(25) NOT NULL,
+  CONSTRAINT equipamento_pkey PRIMARY KEY (id_equipamento),
+  CONSTRAINT equipamento_id_cliente_fkey FOREIGN KEY (id_cliente)
+      REFERENCES public.cliente (id_cliente) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.equipamento
+  OWNER TO postgres;
+
+CREATE TABLE public.usuario
+(
+  id_user integer NOT NULL DEFAULT nextval('usuario_id_user_seq'::regclass),
+  login character varying(10) NOT NULL,
+  senha character varying(8) NOT NULL,
+  CONSTRAINT usuario_pkey PRIMARY KEY (id_user)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.usuario
+  OWNER TO postgres;
