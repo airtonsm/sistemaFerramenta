@@ -49,6 +49,11 @@ prefix="c"%>
           /><br /><br />
 
           <input class="submit" type="submit" value="CADASTRAR" />
+          
+           /><br /><br />
+           
+           <a href= "cadastroFerramenta.jsp">Cadastrar Ferramentas</a>
+           <a href= "servicoFerramenta.jsp">Manutenção Ferramenta</a>
         </form>
       </div>
     </div>

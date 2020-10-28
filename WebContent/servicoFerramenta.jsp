@@ -43,8 +43,15 @@ pageEncoding="ISO-8859-1"%>
         </c:forEach>
  
         </table>
+        
+           
+       <br /><br />
+          <a  href= "cadastroCliente.jsp">Cadastrar Cliente</a>
+          <a href= "cadastroFerramenta.jsp">Cadastro Ferramenta</a>
         </div>  
-      </div>
+      </div> 
     </div>
+    
+      
   </body>
 </html>

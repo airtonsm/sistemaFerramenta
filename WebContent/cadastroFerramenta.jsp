@@ -38,6 +38,10 @@ pageEncoding="ISO-8859-1"%>
           /><br /><br />             
 
           <input class="submit" type="submit" value="cadastrar" />
+          
+         <br /><br />
+          <a href= "cadastroCliente.jsp">Cadastrar Cliente</a>
+           <a href= "servicoFerramenta.jsp">Manutenção Ferramenta</a>
           <br /><br />
         </form>
       </div>
