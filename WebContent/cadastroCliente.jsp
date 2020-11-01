@@ -8,10 +8,12 @@ prefix="c"%>
     <title>Cadastro Usuário</title>
     <link rel="stylesheet" href="css/global.css" />
   </head>
-  <body>
+  <body>  
+  
     <div class="background">
       <div class="container">
-        <form action="Cliente" method="post">
+          <h1 class="title">Cadastro de Cliente</h1>     
+        <form action="Cliente" method="post">        
           <input
             class="inputs"
             placeholder="Nome do Cliente"
@@ -49,8 +51,8 @@ prefix="c"%>
           /><br /><br />
 
           <input class="submit" type="submit" value="CADASTRAR" />
-          
-           /><br /><br />
+                     
+           <h3 style="color: orange;">${msg}</h3><br /><br />
            
            <a href= "cadastroFerramenta.jsp">Cadastrar Ferramentas</a>
            <a href= "servicoFerramenta.jsp">Manutenção Ferramenta</a>

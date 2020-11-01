@@ -12,6 +12,10 @@ pageEncoding="ISO-8859-1"%>
     <div class="background">
       <div class="container">
         <h1 class="title">Cadastro de Ferramentas para manutenção</h1>
+        
+        
+        
+        
         <form action="salvarEquipamento" method="post">
           <input
             placeholder="Id do cliente"

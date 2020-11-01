@@ -35,13 +35,11 @@ public class Usuario extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {		
 		
-		String id = request.getParameter("id");
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
 		
 		BeanFerramenta usuario = new BeanFerramenta();
 		
-		/*usuario.setId(!id.isEmpty() ? Long.parseLong(id) : 0);*/
 		usuario.setLogin(login);
 		usuario.setSenha(senha);
 		

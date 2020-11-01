@@ -44,10 +44,20 @@ public class Cliente extends HttpServlet {
 		cliente.setEndereco(endereco);
 		cliente.setCpf(cpf);
 		
-		daoCliente.salvar(cliente);
+		try {
+		if(!daoCliente.validarCliente(cpf)) {
+			request.setAttribute("msg", "Cliente já está cadastrado!!!");
+		}
+		if(daoCliente.validarCliente(cpf)) {
+			request.setAttribute("msg", "Cliente cadastrado com sucesso");
+			daoCliente.salvar(cliente);
+		}				
 		
 		RequestDispatcher view = request.getRequestDispatcher("cadastroCliente.jsp");
 		view.forward(request, response);
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 	}
 
