@@ -59,10 +59,19 @@ public class DaoEquipamento {
 			consultar.add(beanEquipamento);		
 		}
 		
-		return consultar;
+		return consultar;		
+	}
+	
+	public boolean validarEquipamento(String os) throws Exception {
+		String sql = "select count(1) as qtd from equipamento where os = '" + os +"'";
+		PreparedStatement statement = connection.prepareStatement(sql);
 		
+		ResultSet resultSet = statement.executeQuery();
 		
-		
+		if(resultSet.next()) {
+			return resultSet.getInt("qtd") <= 1;
+		}
+		return false;
 	}
 
 

@@ -46,7 +46,7 @@ public class Cliente extends HttpServlet {
 		
 		try {
 		if(!daoCliente.validarCliente(cpf)) {
-			request.setAttribute("msg", "Cliente já está cadastrado!!!");
+			request.setAttribute("msg", "Cliente já está cadastrado!");
 		}
 		if(daoCliente.validarCliente(cpf)) {
 			request.setAttribute("msg", "Cliente cadastrado com sucesso");

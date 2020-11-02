@@ -44,12 +44,20 @@ public class Equipamento extends HttpServlet {
 		equipamento.setId_cliente(Integer.valueOf(id_cliente));;
 		equipamento.setOs(os);
 		equipamento.setDescricao(descricao);
-		
-		daoEquipamento.salvar(equipamento);
+		try {
+		if(!daoEquipamento.validarEquipamento(os)) {
+			request.setAttribute("msg", "Ordem de serviço já cadastra no sistema!!!");
+		}
+		if(daoEquipamento.validarEquipamento(os)) {
+			request.setAttribute("msg", "Ordem de serviço cadastrada com sucesso!");
+			daoEquipamento.salvar(equipamento);
+		}		
 		
 		RequestDispatcher view = request.getRequestDispatcher("cadastroFerramenta.jsp");		
 		view.forward(request, response);
-		
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
