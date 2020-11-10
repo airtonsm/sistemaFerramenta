@@ -8,9 +8,14 @@ pageEncoding="ISO-8859-1"%>
     <link rel="stylesheet" href="css/global.css" />
   </head>
   <body>
+
     <div class="background">
       <div class="container">
-        <h1 class="title">Cadastro de Ferramentas para manutenï¿½ï¿½o</h1>
+        <h1 class="title">Cadastro de Ferramentas para manutenção</h1>
+        
+        
+        
+        
         <form action="salvarEquipamento" method="post">
           <input
             placeholder="Id do cliente"
@@ -27,31 +32,24 @@ pageEncoding="ISO-8859-1"%>
             id="os"
             name="os"
           /><br /><br />
-
-          <input
-            placeholder="Descriï¿½ï¿½o do equipamento"
+          
+           <input
+            placeholder="Descrição do equipamento"
             class="inputs"
             type="text"
             id="descricao"
-            name="descricao"
-          /><br /><br />
+            name="descricao"                        
+          /><br /><br />             
 
-          <input class="submit" type="submit" value="CADASTRAR" />
+          <input class="submit" type="submit" value="cadastrar" />
+          
+         <br /><br />
+          <a href= "cadastroCliente.jsp">Cadastrar Cliente</a>
+           <a href= "servicoFerramenta.jsp">Manutenção Ferramenta</a>
           <br /><br />
+          
+          <h3 style="color: orange;">${msg}</h3><br /><br />
         </form>
-      </div>
-      <div class="frontEndDev">
-        <a
-          target="_blank"
-          href="https://github.com/joaopealves"
-          id="frontEndDev"
-          ><span>Front end feito por: </span>JoÃ£o Pedro Alves</a
-        >
-      </div>
-      <div class="backEndDev">
-        <a target="_blank" href="https://github.com/airtonsm" id="BackEndDev"
-          ><span>Back end feito por: </span>JosÃ© Airton</a
-        >
       </div>
     </div>
   </body>

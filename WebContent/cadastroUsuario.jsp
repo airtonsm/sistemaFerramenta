@@ -5,13 +5,12 @@ prefix="c"%>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Cadastro Usu�rio</title>
+    <title>Cadastro Usu�rio</title>
     <link rel="stylesheet" href="css/global.css" />
   </head>
   <body>
     <div class="background">
       <div class="container">
-        <h1>Cadastro Usu�rio</h1>
         <form action="salvarUsuario" method="post">
           <input
             class="inputs"
@@ -38,19 +37,6 @@ prefix="c"%>
          
 
         </form>
-      </div>
-      <div class="frontEndDev">
-        <a
-          target="_blank"
-          href="https://github.com/joaopealves"
-          id="frontEndDev"
-          ><span>Front end feito por: </span>João Pedro Alves</a
-        >
-      </div>
-      <div class="backEndDev">
-        <a target="_blank" href="https://github.com/airtonsm" id="BackEndDev"
-          ><span>Back end feito por: </span>José Airton</a
-        >
       </div>
     </div>
   </body>
