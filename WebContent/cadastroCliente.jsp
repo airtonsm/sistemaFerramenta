@@ -5,15 +5,14 @@ prefix="c"%>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Cadastro Usuário</title>
+    <title>Cadastro Usuï¿½rio</title>
     <link rel="stylesheet" href="css/global.css" />
   </head>
-  <body>  
-  
+  <body>
     <div class="background">
       <div class="container">
-          <h1 class="title">Cadastro de Cliente</h1>     
-        <form action="Cliente" method="post">        
+        <form action="Cliente" method="post">
+          <h1>Cadastro Cliente</h1>
           <input
             class="inputs"
             placeholder="Nome do Cliente"
@@ -31,16 +30,16 @@ prefix="c"%>
             id="contato"
             value="${user.contato}"
           /><br /><br />
-          
+
           <input
             class="inputs"
-            placeholder="Endereço"
+            placeholder="Endereï¿½o"
             type="text"
             name="endereco"
             id="endereco"
             value="${user.endereco}"
           /><br /><br />
-          
+
           <input
             class="inputs"
             placeholder="cpf"
@@ -51,12 +50,20 @@ prefix="c"%>
           /><br /><br />
 
           <input class="submit" type="submit" value="CADASTRAR" />
-                     
-           <h3 style="color: orange;">${msg}</h3><br /><br />
-           
-           <a href= "cadastroFerramenta.jsp">Cadastrar Ferramentas</a>
-           <a href= "servicoFerramenta.jsp">Manutenção Ferramenta</a>
         </form>
+      </div>
+      <div class="frontEndDev">
+        <a
+          target="_blank"
+          href="https://github.com/joaopealves"
+          id="frontEndDev"
+          ><span>Front end feito por: </span>JoÃ£o Pedro Alves</a
+        >
+      </div>
+      <div class="backEndDev">
+        <a target="_blank" href="https://github.com/airtonsm" id="BackEndDev"
+          ><span>Back end feito por: </span>JosÃ© Airton</a
+        >
       </div>
     </div>
   </body>
