@@ -5,13 +5,14 @@ prefix="c"%>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Cadastro Usuário</title>
+    <title>Cadastro Usuï¿½rio</title>
     <link rel="stylesheet" href="css/global.css" />
   </head>
   <body>
     <div class="background">
       <div class="container">
         <form action="Cliente" method="post">
+          <h1>Cadastro Cliente</h1>
           <input
             class="inputs"
             placeholder="Nome do Cliente"
@@ -29,16 +30,16 @@ prefix="c"%>
             id="contato"
             value="${user.contato}"
           /><br /><br />
-          
+
           <input
             class="inputs"
-            placeholder="Endereço"
+            placeholder="Endereï¿½o"
             type="text"
             name="endereco"
             id="endereco"
             value="${user.endereco}"
           /><br /><br />
-          
+
           <input
             class="inputs"
             placeholder="cpf"
@@ -50,6 +51,19 @@ prefix="c"%>
 
           <input class="submit" type="submit" value="CADASTRAR" />
         </form>
+      </div>
+      <div class="frontEndDev">
+        <a
+          target="_blank"
+          href="https://github.com/joaopealves"
+          id="frontEndDev"
+          ><span>Front end feito por: </span>JoÃ£o Pedro Alves</a
+        >
+      </div>
+      <div class="backEndDev">
+        <a target="_blank" href="https://github.com/airtonsm" id="BackEndDev"
+          ><span>Back end feito por: </span>JosÃ© Airton</a
+        >
       </div>
     </div>
   </body>

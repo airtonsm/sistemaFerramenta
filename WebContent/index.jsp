@@ -12,9 +12,8 @@ prefix="c"%>
   <body>
     <div class="background">
       <div class="container">
-        <div class="links">            
-            <span class="lineSpan"></span>
-         
+        <div class="links">
+          <span class="lineSpan"></span>
         </div>
 
         <form class="form" action="LoginServlet" method="post">
@@ -36,11 +35,23 @@ prefix="c"%>
 
           <br /><input class="submit" type="submit" value="LOGAR" /><br />
         </form>
-        <footer>
-          <a id="sign-up" href="cadastroUsuario.jsp">Cadastrar novo usu�rio</a>
-        </footer>
+        <a id="cadastro" href="cadastroUsuario.jsp">Cadastrar novo usu�rio</a>
+      </div>
+      <div class="frontEndDev">
+        <a
+          target="_blank"
+          href="https://github.com/joaopealves"
+          id="frontEndDev"
+          ><span>Front end feito por: </span>João Pedro Alves</a
+        >
+      </div>
+      <div class="backEndDev">
+        <a target="_blank" href="https://github.com/airtonsm" id="BackEndDev"
+          ><span>Back end feito por: </span>José Airton</a
+        >
       </div>
     </div>
+
     <script type="text/javascript"></script>
   </body>
 </html>
