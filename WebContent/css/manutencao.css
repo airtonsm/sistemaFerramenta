@@ -10,7 +10,7 @@ body {
 }
 
 .responsive-table {
-  width: 80%;
+  width: 100%;
   margin-bottom: 1.5em;
   border-spacing: 0;
   border: 1px solid rgba(29, 150, 178, 1);
@@ -63,7 +63,7 @@ td {
   border: none;
   border-radius: 9px;
   width: 400px;
-  height: 40px;
+  height: 5px;
   outline: 0;
   resize: vertical;
   padding: 1.2rem 1.6rem;
@@ -82,3 +82,5 @@ td {
   margin-bottom: 20px;
   margin-top: 20px;
 }
+
+

@@ -29,9 +29,14 @@ prefix="c"%>
             name="senha"
             id="senha"
             value="${user.senha}"
-          /><br /><br />
+          /><br /><br />    
 
           <input class="submit" type="submit" value="CADASTAR" />
+          
+          <h3 style="color: orange;">${msg}</h3>
+          
+         
+
         </form>
       </div>
       <div class="frontEndDev">

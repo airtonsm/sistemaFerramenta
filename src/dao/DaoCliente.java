@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import beans.BeanCliente;
@@ -34,4 +35,18 @@ public class DaoCliente {
 			}
 		}
 	}	
+	
+	public boolean validarCliente(String cpf) throws Exception {
+		
+		String sql = "select count(1) as qtd from cliente  where cpf = '" + cpf + "'";
+		PreparedStatement statement = connection.prepareStatement(sql);
+		ResultSet resultSet =  statement.executeQuery();
+		
+		if(resultSet.next()) {
+			return resultSet.getInt("qtd") <= 0;
+		}
+		
+		return false;
+	}
+	
 }

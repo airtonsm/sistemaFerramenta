@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import beans.BeanFerramenta;
 import dao.DaoUsuario;
+
 
 
 @WebServlet("/salvarUsuario")
@@ -30,7 +32,8 @@ public class Usuario extends HttpServlet {
 	}
 
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {		
 		
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
@@ -40,10 +43,26 @@ public class Usuario extends HttpServlet {
 		usuario.setLogin(login);
 		usuario.setSenha(senha);
 		
-		daoUsuario.salvar(usuario);
+		try {
+
+			if (!daoUsuario.validarLogin(login)) {
+				request.setAttribute("msg", "Usuário já cadastrada!!"); 
+				PrintWriter out = response.getWriter();
+
+						
+			}
+			if (daoUsuario.validarLogin(login)) {
+				daoUsuario.salvar(usuario);
+				request.setAttribute("msg", "Usuário cadastrado com sucesso!!!");
+			}
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("cadastroUsuario.jsp");
 		dispatcher.forward(request, response);
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		
 	}
 
