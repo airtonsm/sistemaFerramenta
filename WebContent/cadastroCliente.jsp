@@ -1,18 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 pageEncoding="ISO-8859-1"%> <%@ taglib uri="http://java.sun.com/jsp/jstl/core"
 prefix="c"%>
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Cadastro Usu�rio</title>
+    <title>Cadastro Usuário</title>
     <link rel="stylesheet" href="css/global.css" />
   </head>
   <body>
     <div class="background">
       <div class="container">
         <form action="Cliente" method="post">
-          <h1>Cadastro Cliente</h1>
+             <h1 class="title">Cadastro de Cliente</h1> 
+              
+
           <input
             class="inputs"
             placeholder="Nome do Cliente"
@@ -33,7 +36,7 @@ prefix="c"%>
 
           <input
             class="inputs"
-            placeholder="Endere�o"
+            placeholder="Endereção"
             type="text"
             name="endereco"
             id="endereco"
@@ -50,21 +53,18 @@ prefix="c"%>
           /><br /><br />
 
           <input class="submit" type="submit" value="CADASTRAR" />
+          
+          
+          <br /><br />
+          <a href= "cadastroCliente.jsp">Cadastrar Cliente</a>
+           <a href= "servicoFerramenta.jsp">Manutenção Ferramenta</a>
+          
         </form>
+        
+        
+        
       </div>
-      <div class="frontEndDev">
-        <a
-          target="_blank"
-          href="https://github.com/joaopealves"
-          id="frontEndDev"
-          ><span>Front end feito por: </span>João Pedro Alves</a
-        >
+
       </div>
-      <div class="backEndDev">
-        <a target="_blank" href="https://github.com/airtonsm" id="BackEndDev"
-          ><span>Back end feito por: </span>José Airton</a
-        >
-      </div>
-    </div>
   </body>
 </html>

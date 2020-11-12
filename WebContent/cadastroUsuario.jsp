@@ -5,13 +5,13 @@ prefix="c"%>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Cadastro Usuï¿½rio</title>
+    <title>Cadastro Usuário</title>
     <link rel="stylesheet" href="css/global.css" />
   </head>
   <body>
     <div class="background">
       <div class="container">
-        <h1>Cadastro Usuï¿½rio</h1>
+        <h1>Cadastro Usuário</h1>
         <form action="salvarUsuario" method="post">
           <input
             class="inputs"
@@ -33,24 +33,9 @@ prefix="c"%>
 
           <input class="submit" type="submit" value="CADASTAR" />
           
-          <h3 style="color: orange;">${msg}</h3>
-          
-         
+          <h3 style="color: orange;">${msg}</h3>         
 
         </form>
-      </div>
-      <div class="frontEndDev">
-        <a
-          target="_blank"
-          href="https://github.com/joaopealves"
-          id="frontEndDev"
-          ><span>Front end feito por: </span>JoÃ£o Pedro Alves</a
-        >
-      </div>
-      <div class="backEndDev">
-        <a target="_blank" href="https://github.com/airtonsm" id="BackEndDev"
-          ><span>Back end feito por: </span>JosÃ© Airton</a
-        >
       </div>
     </div>
   </body>

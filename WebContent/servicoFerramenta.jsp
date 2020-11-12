@@ -5,7 +5,7 @@ prefix="c"%>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Manutenï¿½ï¿½o Ferramenta</title>
+    <title>Manutenção Ferramenta</title>
     <link rel="stylesheet" href="css/manutencao.css" />
   </head>
   <body>
@@ -16,45 +16,42 @@ prefix="c"%>
 
         <form action="Manutencao" method="post">
           <input
-            placeholder="Ordem de serviï¿½o"
+            placeholder="Ordem de serviço"
             class="inputs"
             type="text"
             id="os"
             name="os"
           /><br /><br />
         </form>
+</div>
+       <div style="text-align:center;">
+        <table class="responsive-table" class="center">
+        
+        <tr>
+        	<th>Nome Cliente</th> 
+        	<th>Ordem de Serviço</th>
+        	<th>Descrição Ferramenta</th>
+        	
+        </tr>
+        
+        <c:forEach items="${equipamento}" var="user">
+        <tr>
 
-        <div style="text-align: center">
-          <table class="responsive-table" class="center">
-            <tr>
-              <th>Nome Cliente</th>
-              <th>Ordem de Serviï¿½o</th>
-              <th>Descriï¿½ï¿½o Ferramenta</th>
-            </tr>
+        	<td><c:out value="${user.nome}"></c:out></td>
+        	<td><c:out value="${user.os}"></c:out></td>
+        	<td><c:out value="${user.descricao}"></c:out></td>
+        </tr>
+        </c:forEach>
+ 
+        </table>       
+           
+       <br /><br />
+          <a  href= "cadastroCliente.jsp">Cadastrar Cliente</a>
+          <a href= "cadastroFerramenta.jsp">Cadastro Ferramenta</a>
+        </div>  
+      </div> 
 
-            <c:forEach items="${equipamento}" var="user">
-              <tr>
-                <td><c:out value="${user.id_cliente}"></c:out></td>
-                <td><c:out value="${user.os}"></c:out></td>
-                <td><c:out value="${user.descricao}"></c:out></td>
-              </tr>
-            </c:forEach>
-          </table>
-        </div>
-      </div>
-      <div class="frontEndDev">
-        <a
-          target="_blank"
-          href="https://github.com/joaopealves"
-          id="frontEndDev"
-          ><span>Front end feito por: </span>JoÃ£o Pedro Alves</a
-        >
-      </div>
-      <div class="backEndDev">
-        <a target="_blank" href="https://github.com/airtonsm" id="BackEndDev"
-          ><span>Back end feito por: </span>JosÃ© Airton</a
-        >
-      </div>
-    </div>
+       
+
   </body>
 </html>

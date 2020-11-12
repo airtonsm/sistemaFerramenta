@@ -35,23 +35,8 @@ prefix="c"%>
 
           <br /><input class="submit" type="submit" value="LOGAR" /><br />
         </form>
-        <a id="cadastro" href="cadastroUsuario.jsp">Cadastrar novo usu�rio</a>
+        <a id="cadastro" href="cadastroUsuario.jsp">Cadastrar novo usu�rio</a>
       </div>
-      <div class="frontEndDev">
-        <a
-          target="_blank"
-          href="https://github.com/joaopealves"
-          id="frontEndDev"
-          ><span>Front end feito por: </span>João Pedro Alves</a
-        >
-      </div>
-      <div class="backEndDev">
-        <a target="_blank" href="https://github.com/airtonsm" id="BackEndDev"
-          ><span>Back end feito por: </span>José Airton</a
-        >
-      </div>
-    </div>
 
-    <script type="text/javascript"></script>
   </body>
 </html>
