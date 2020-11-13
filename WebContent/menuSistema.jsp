@@ -15,7 +15,7 @@ pageEncoding="ISO-8859-1"%>
           <div class="linksMenuSistema">
 
             <a href="cadastroCliente.jsp" id="cadastro de clientes">
-            <img src="img/cliente.jpg" title="cadastro de clientes" width="120px" legth="120px">
+            <img class="img" src="img/cliente.jpg" title="cadastro de clientes" width="120px" legth="120px">
              </a>
 
             <a id="menuPrincipal" href="cadastroFerramenta.jsp" > 

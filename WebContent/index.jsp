@@ -37,6 +37,6 @@ prefix="c"%>
         </form>
         <a id="cadastro" href="cadastroUsuario.jsp">Cadastrar novo usuário</a>
       </div>
-
+      </div>
   </body>
 </html>

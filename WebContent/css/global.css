@@ -188,43 +188,9 @@ table {
 table * {
   position: relative;
 }
-.frontEndDev {
-  background-color: rgba(235, 235, 235, 0.384);
-  width: 100vw;
-  height: 50px;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#frontEndDev {
-  text-decoration: none;
-  color: rgb(95, 33, 153);
-  font: 700 1em 'JetBrains Mono';
+
+.img {
+	height: auto;
 }
 
-#frontEndDev span {
-  color: rgb(7, 7, 7);
-}
 
-.backEndDev {
-  background-color: rgba(235, 235, 235, 0.384);
-  width: 100vw;
-  height: 50px;
-  position: absolute;
-  bottom: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#backEndDev {
-  text-decoration: none;
-  color: rgb(182, 18, 18);
-  font: 700 1em 'JetBrains Mono';
-}
-
-#backEndDev span {
-  color: rgb(7, 7, 7);
-}
