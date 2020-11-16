@@ -13,6 +13,7 @@ prefix="c"%>
       <div class="container">
         <h1>Cadastro Usuário</h1>
         <form action="salvarUsuario" method="post">
+        	
           <input
             class="inputs"
             placeholder="Login"
@@ -29,7 +30,8 @@ prefix="c"%>
             name="senha"
             id="senha"
             value="${user.senha}"
-          /><br /><br />    
+            
+          /><br /><br />
 
           <input class="submit" type="submit" value="CADASTAR" />
           

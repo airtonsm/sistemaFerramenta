@@ -12,10 +12,10 @@ body {
 }
 
 .container {
-  background-color: rgba(81, 136, 160, 0.568);
+  background-color: rgb(109, 176, 252);
 
   width: 90vw;
-  height: 50vh;
+  height: 70vh;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
@@ -28,8 +28,8 @@ body {
 .container h1 {
   text-align: center;
   margin-bottom: 20px;
-  font: 700 2.5rem Arial;
-  color: rgba(238, 238, 238, 0.795);
+  font: 700 1.5rem Arial;
+  color: rgba(255, 255, 255);
 }
 .background {
   width: 100vw;
@@ -58,14 +58,14 @@ body {
 }
 
 a {
-  font: 700 1.3rem Roboto;
+  font: 500 1.2rem Roboto;
   justify-content: space-between;
   flex-direction: row;
   margin: 10px;
-  color: rgb(226, 226, 226);
+  color: rgb(255, 255, 255);
 }
 #sign-up {
-  color: rgb(213, 214, 214);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   transition: 1s;
 }

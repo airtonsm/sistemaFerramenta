@@ -15,6 +15,8 @@ prefix="c"%>
         <div class="links">
           <span class="lineSpan"></span>
         </div>
+        
+        <h1>Login</h1>
 
         <form class="form" action="LoginServlet" method="post">
           <br /><input
