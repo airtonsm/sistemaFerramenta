@@ -14,16 +14,15 @@ prefix="c"%>
         <h1>Pesquisar Ferramenta</h1>
         <br /><br />
 
-        <form action="Manutencao" method="post">
-          <input
-            placeholder="Ordem de serviço"
-            class="inputs"
-            type="text"
-            id="os"
-            name="os"
-          /><br /><br />
-        </form>
-</div>
+			<form action="Manutencao" method="post">
+				<input placeholder="Ordem de serviço" class="inputs" type="text"
+					id="os" name="os" /> 
+				
+				<input class="submit"
+					type="submit" value="PESQUISAR" /> 
+					<br /><br />
+			</form>
+		</div>
        <div style="text-align:center;">
         <table class="responsive-table" class="center">
         

@@ -101,7 +101,7 @@ a {
   outline: 0;
   resize: vertical;
   padding: 1.2rem 1.6rem;
-  border: 1px solid rgba(224, 224, 224, 0.452);
+  border: 1px solid rgb(255, 255, 255);
   transition: 0.4s;
 }
 
