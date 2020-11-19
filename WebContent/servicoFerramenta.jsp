@@ -30,6 +30,8 @@ prefix="c"%>
         	<th>Nome Cliente</th> 
         	<th>Ordem de Serviço</th>
         	<th>Descrição Ferramenta</th>
+        	<th>Status</th>
+        	<th>Acão</th>
         	
         </tr>
         
