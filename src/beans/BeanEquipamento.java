@@ -6,8 +6,17 @@ public class BeanEquipamento extends BeanCliente {
 	private String os;
 	private String descricao;
 	private String nome;
+	private String status;
 	
 	
+	
+	
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -31,6 +40,17 @@ public class BeanEquipamento extends BeanCliente {
 	}
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+	
+	public String status_equip(int valor) {
+		if(valor == 1) {
+			status = "Aguardando Conserto";
+		}else if(valor == 2){
+			status = "Em manutenção";
+		}else {
+			status = "Máquina Pronta";
+		}
+		return status;
 	}
 	
 	

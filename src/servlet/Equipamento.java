@@ -18,6 +18,8 @@ import dao.DaoEquipamento;
 @WebServlet("/salvarEquipamento")
 public class Equipamento extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	BeanEquipamento beanEquipamento = new BeanEquipamento();
       
 	private DaoEquipamento daoEquipamento = new DaoEquipamento();
     
@@ -34,9 +36,12 @@ public class Equipamento extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);		
 		
+		
+		
 		String id_cliente = request.getParameter("id_cliente");
 		String os = request.getParameter("os");
 		String descricao = request.getParameter("descricao");
+		String status = request.getParameter("status");
 
 		
 		BeanEquipamento equipamento = new BeanEquipamento();
@@ -44,6 +49,8 @@ public class Equipamento extends HttpServlet {
 		equipamento.setId_cliente(Integer.valueOf(id_cliente));;
 		equipamento.setOs(os);
 		equipamento.setDescricao(descricao);
+		equipamento.setStatus(status);
+		
 		try {
 		if(!daoEquipamento.validarEquipamento(os)) {
 			request.setAttribute("msg", "Ordem de serviço já cadastra no sistema!!!");
