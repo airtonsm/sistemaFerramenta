@@ -45,8 +45,10 @@ public class DaoEquipamento {
 
 		List<BeanEquipamento> consultar = new ArrayList<BeanEquipamento>();
 
-		String sql = "select cliente.nome, equipamento.os, equipamento.descricao" + " from equipamento"
-				+ " inner join cliente" + " ON equipamento.id_cliente = cliente.id_cliente"
+		String sql = "select cliente.nome, equipamento.os, equipamento.descricao, equipamento.status"
+				+ " from equipamento" 
+				+ " inner join cliente" 
+				+ " ON equipamento.id_cliente = cliente.id_cliente"
 				+ " where equipamento.os = '" + os + "'";
 
 		PreparedStatement statement = connection.prepareStatement(sql);
@@ -57,6 +59,7 @@ public class DaoEquipamento {
 			beanEquipamento.setOs(resultSet.getString("os"));
 			beanEquipamento.setNome(resultSet.getString("nome"));
 			beanEquipamento.setDescricao(resultSet.getString("descricao"));
+			beanEquipamento.setStatus(resultSet.getString("status"));
 
 			consultar.add(beanEquipamento);
 		}
@@ -74,31 +77,41 @@ public class DaoEquipamento {
 			return resultSet.getInt("qtd") <= 1;
 		}
 		return false;
+	}	
+	
+	public void alterarStatus(String os) {
+			
+			int valor = 0;
+			
+			if(valor <= 3) {
+				valor ++;
+				beanEquipamento.status_equip(valor);
+			}
+		
+		try {
+			String sql = "update equipamento set = '"+ beanEquipamento.status_equip(valor)  + "' status where os = '" + os + "'";
+			PreparedStatement st = connection.prepareStatement(sql);
+			st.executeUpdate();
+			connection.commit();			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
-	public List<BeanEquipamento> consultar() throws Exception
-	{
 
-		List<BeanEquipamento> consultarTodos = new ArrayList<BeanEquipamento>();
-
-		String sql = "select cliente.nome, equipamento.os, equipamento.descricao" 
-				+ " from equipamento"
-				+ " inner join cliente" 
-				+ " ON equipamento.id_cliente = cliente.id_cliente";
-
+	public void deletar(String os) {
+		
+		try {
+		String sql = "delete from equipamento where os = '" +  os + "'";
 		PreparedStatement statement = connection.prepareStatement(sql);
-		ResultSet resultSet = statement.executeQuery();
-
-		while (resultSet.next()) {
-			BeanEquipamento beanEquipamento = new BeanEquipamento();
-			beanEquipamento.setOs(resultSet.getString("os"));
-			beanEquipamento.setNome(resultSet.getString("nome"));
-			beanEquipamento.setDescricao(resultSet.getString("descricao"));
-
-			consultarTodos.add(beanEquipamento);
+		statement.execute();
+		connection.commit();
+		}catch (Exception e) {
+			e.printStackTrace();
 		}
-
-		return consultarTodos;
+		
 	}
 
 }
+
+

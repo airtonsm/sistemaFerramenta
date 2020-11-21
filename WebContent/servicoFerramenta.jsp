@@ -41,6 +41,9 @@ prefix="c"%>
         	<td><c:out value="${user.nome}"></c:out></td>
         	<td><c:out value="${user.os}"></c:out></td>
         	<td><c:out value="${user.descricao}"></c:out></td>
+        	<td><c:out value="${user.status}"></c:out></td>
+        	<td><a href="/salvarequipamento?acao=alterarStatus">Iniciar/Finalizar</a></td>
+        	
         </tr>
         </c:forEach>
  

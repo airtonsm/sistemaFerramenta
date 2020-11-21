@@ -5,12 +5,17 @@ import beans.BeanEquipamento;
 public class Test {
 
 	public static void main(String[] args) {
+		BeanEquipamento beanEquipamento =  new BeanEquipamento();
 		
-		BeanEquipamento beanEquipamento = new BeanEquipamento();
+		int valor = 0;
 		
-		String status = beanEquipamento.status_equip(3);
+		if(valor <= 3) {
+			valor ++;
+			beanEquipamento.status_equip(valor);
+		}
 		
-		System.out.println(status);
+		System.out.println(beanEquipamento.status_equip(valor));
+		
 	}
 
 }
