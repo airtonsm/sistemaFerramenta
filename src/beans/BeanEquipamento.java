@@ -43,11 +43,14 @@ public class BeanEquipamento extends BeanCliente {
 	}
 	
 	public String status_equip(int valor) {
-		if(valor == 0) {
+		
+		if(valor == 1) {
 			status = "Aguardando Conserto";
-		}else if(valor == 1){
+		}
+		else if(valor == 2){
 			status = "Em manutenção";
-		}else if(valor == 3){
+		}
+		else if(valor == 3){
 			status = "Máquina Pronta";
 		}
 		else {

@@ -39,8 +39,9 @@ pageEncoding="ISO-8859-1"%>
           /><br /><br />
 
 
-          <input class="submit" type="submit" value="CADASTRAR" />
+          <input class="submit" type="submit" value="CADASTRAR" /><br /><br />
 
+	<h3 style="color: orange;">${msg}</h3>
           
          <br /><br />
           <a href= "cadastroCliente.jsp">Cadastrar Cliente</a>

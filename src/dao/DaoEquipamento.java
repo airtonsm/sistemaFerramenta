@@ -79,7 +79,7 @@ public class DaoEquipamento {
 		return false;
 	}	
 	
-	public void alterarStatus(String os) {
+	/*public void alterarStatus(String os) {
 			
 			int valor = 0;
 			
@@ -87,6 +87,8 @@ public class DaoEquipamento {
 				valor ++;
 				beanEquipamento.status_equip(valor);
 			}
+			
+
 		
 		try {
 			String sql = "update equipamento set = '"+ beanEquipamento.status_equip(valor)  + "' status where os = '" + os + "'";
@@ -96,7 +98,7 @@ public class DaoEquipamento {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 
 
 	public void deletar(String os) {
