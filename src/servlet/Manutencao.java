@@ -14,6 +14,8 @@ import dao.DaoEquipamento;
 @WebServlet("/Manutencao")
 public class Manutencao extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	DaoEquipamento daoEquipamento = new DaoEquipamento();
 
 	public Manutencao() {
 		super();
@@ -21,9 +23,15 @@ public class Manutencao extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+			throws ServletException, IOException {		
+		
+		String acao = request.getParameter("acao");
+		String user = request.getParameter("user");
+		
+		if(acao.equalsIgnoreCase("delete")) {
+			daoEquipamento.deletar(user);
+			RequestDispatcher view = request.getRequestDispatcher("servicoFerramenta.jsp");
+			request.getAttribute("equipamento", daoEquipamento.consultar());
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -35,9 +43,12 @@ public class Manutencao extends HttpServlet {
 		DaoEquipamento equipamento = new DaoEquipamento();
 
 		try {
+			
 			RequestDispatcher view = request.getRequestDispatcher("/servicoFerramenta.jsp");
 			request.setAttribute("equipamento", equipamento.consultar(os));
 			view.forward(request, response);
+			
+			
 		} catch (Exception e) {
 
 			e.printStackTrace();

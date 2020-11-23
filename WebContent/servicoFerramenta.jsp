@@ -44,6 +44,7 @@ prefix="c"%>
         	<td><c:out value="${user.status}"></c:out></td>
         	<td><a href="/salvarequipamento?acao=alterarStatus">Iniciar/Finalizar</a></td>
         	
+        	
         </tr>
         </c:forEach>
  
