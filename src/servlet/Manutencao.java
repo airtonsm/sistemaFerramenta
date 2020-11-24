@@ -25,13 +25,22 @@ public class Manutencao extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {		
 		
+		try {
 		String acao = request.getParameter("acao");
 		String user = request.getParameter("user");
+		
+		String os = request.getParameter("os");
 		
 		if(acao.equalsIgnoreCase("delete")) {
 			daoEquipamento.deletar(user);
 			RequestDispatcher view = request.getRequestDispatcher("servicoFerramenta.jsp");
-			request.getAttribute("equipamento", daoEquipamento.consultar());
+			request.setAttribute("equipamento", daoEquipamento.consultar(os));
+			request.setAttribute("msg", "Usuário deletado com sucesso!!!");
+			view.forward(request, response);
+		}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

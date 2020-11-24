@@ -40,6 +40,31 @@ public class DaoEquipamento {
 			}
 		}
 	}
+	
+	public List<BeanEquipamento> listar() throws Exception{
+		
+		List<BeanEquipamento> listar = new ArrayList<BeanEquipamento>();
+		
+		String sql = "select cliente.nome, equipamento.os, equipamento.descricao, equipamento.status"
+					+ " from equipamento" 
+					+ " inner join cliente" 
+					+ " ON equipamento.id_cliente = cliente.id_cliente";
+		
+		PreparedStatement statement = connection.prepareStatement(sql);
+		ResultSet resultSet = statement.executeQuery();
+		
+		while(resultSet.next()) {
+			BeanEquipamento beanEquipamento = new BeanEquipamento();
+			beanEquipamento.setOs(resultSet.getString("os"));
+			beanEquipamento.setNome(resultSet.getString("nome"));
+			beanEquipamento.setDescricao(resultSet.getString("descricao"));
+			beanEquipamento.setStatus(resultSet.getString("status"));
+			
+			listar.add(beanEquipamento);
+			
+		}
+		return listar;
+	}
 
 	public List<BeanEquipamento> consultar(String os) throws Exception {
 
