@@ -42,8 +42,8 @@ prefix="c"%>
         	<td><c:out value="${user.os}"></c:out></td>
         	<td><c:out value="${user.descricao}"></c:out></td>
         	<td><c:out value="${user.status}"></c:out></td>
-        	<td><a href="/salvarequipamento?acao=alterarStatus">Iniciar/Finalizar</a></td>
-        	<td><a href="/salvarequipamento?acao=delete&user=${user.os}">Deletar</a></td>
+        	<td><a href="Manutencao?acao=alterarStatus">Iniciar/Finalizar</a></td>
+        	<td><a href="Manutencao?acao=delete&user=${user.os}">Deletar</a></td>
         	
         	
         	

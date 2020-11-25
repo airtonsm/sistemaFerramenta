@@ -32,9 +32,9 @@ public class Manutencao extends HttpServlet {
 		String os = request.getParameter("os");
 		
 		if(acao.equalsIgnoreCase("delete")) {
-			daoEquipamento.deletar(user);
-			RequestDispatcher view = request.getRequestDispatcher("servicoFerramenta.jsp");
-			request.setAttribute("equipamento", daoEquipamento.consultar(os));
+			daoEquipamento.delete(user);
+			RequestDispatcher view = request.getRequestDispatcher("/servicoFerramenta.jsp");
+			request.setAttribute("equipamento", daoEquipamento.consultar(user));
 			request.setAttribute("msg", "Usuário deletado com sucesso!!!");
 			view.forward(request, response);
 		}

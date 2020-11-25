@@ -126,7 +126,7 @@ public class DaoEquipamento {
 	}*/
 
 
-	public void deletar(String os) {
+	public void delete(String os) {
 		
 		try {
 		String sql = "delete from equipamento where os = '" +  os + "'";
@@ -135,6 +135,11 @@ public class DaoEquipamento {
 		connection.commit();
 		}catch (Exception e) {
 			e.printStackTrace();
+			try {
+				connection.rollback();
+			} catch (SQLException e1) {				
+				e1.printStackTrace();
+			}
 		}
 		
 	}
