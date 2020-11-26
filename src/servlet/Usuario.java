@@ -47,7 +47,7 @@ public class Usuario extends HttpServlet {
 
 			if (!daoUsuario.validarLogin(login)) {
 				request.setAttribute("msg", "Usuário já cadastrada!!"); 
-				PrintWriter out = response.getWriter();
+//				PrintWriter out = response.getWriter();
 
 						
 			}

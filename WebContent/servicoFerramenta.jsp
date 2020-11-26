@@ -23,6 +23,7 @@ prefix="c"%>
 					<br /><br />
 			</form>
 		</div>
+		
        <div style="text-align:center;">
         <table class="responsive-table" class="center">
         
@@ -32,25 +33,26 @@ prefix="c"%>
         	<th>Descrição Ferramenta</th>
         	<th>Status</th>
         	<th>Acão</th>
+        	<th>Excluir<th>
         	
         </tr>
-        
-        <c:forEach items="${equipamento}" var="user">
-        <tr>
 
-        	<td><c:out value="${user.nome}"></c:out></td>
-        	<td><c:out value="${user.os}"></c:out></td>
-        	<td><c:out value="${user.descricao}"></c:out></td>
-        	<td><c:out value="${user.status}"></c:out></td>
-        	<td><a href="Manutencao?acao=alterarStatus">Iniciar/Finalizar</a></td>
-        	<td><a href="Manutencao?acao=delete&user=${user.os}">Deletar</a></td>
-        	
-        	
-        	
-        </tr>
-        </c:forEach>
- 
-        </table>       
+				<c:forEach items="${equipamento}" var="user">
+					<tr>
+
+						<td><c:out value="${user.nome}"></c:out></td>
+						<td><c:out value="${user.os}"></c:out></td>
+						<td><c:out value="${user.descricao}"></c:out></td>
+						<td><c:out value="${user.status}"></c:out></td>
+
+						<td><a href="">Iniciar/Finalizar</a></td>
+
+						<td><a href="Manutencao?acao=delete&user=${user.os}">Excluir</a></td>
+
+					</tr>
+				</c:forEach>
+
+			</table>       
            
        <br /><br />
           <a  href= "cadastroCliente.jsp">Cadastrar Cliente</a>
