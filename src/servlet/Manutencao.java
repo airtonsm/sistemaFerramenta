@@ -46,9 +46,6 @@ public class Manutencao extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		doGet(request, response);
-		
-		String acao = request.getParameter("acao");
 
 		String os = request.getParameter("os");
 
