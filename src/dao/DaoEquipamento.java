@@ -40,28 +40,26 @@ public class DaoEquipamento {
 			}
 		}
 	}
-	
-	public List<BeanEquipamento> listar() throws Exception{
-		
+
+	public List<BeanEquipamento> listar() throws Exception {
+
 		List<BeanEquipamento> listar = new ArrayList<BeanEquipamento>();
-		
+
 		String sql = "select cliente.nome, equipamento.os, equipamento.descricao, equipamento.status"
-					+ " from equipamento" 
-					+ " inner join cliente" 
-					+ " ON equipamento.id_cliente = cliente.id_cliente";
-		
+				+ " from equipamento" + " inner join cliente" + " ON equipamento.id_cliente = cliente.id_cliente";
+
 		PreparedStatement statement = connection.prepareStatement(sql);
 		ResultSet resultSet = statement.executeQuery();
-		
-		while(resultSet.next()) {
+
+		while (resultSet.next()) {
 			BeanEquipamento beanEquipamento = new BeanEquipamento();
 			beanEquipamento.setOs(resultSet.getString("os"));
 			beanEquipamento.setNome(resultSet.getString("nome"));
 			beanEquipamento.setDescricao(resultSet.getString("descricao"));
 			beanEquipamento.setStatus(resultSet.getString("status"));
-			
+
 			listar.add(beanEquipamento);
-			
+
 		}
 		return listar;
 	}
@@ -71,9 +69,7 @@ public class DaoEquipamento {
 		List<BeanEquipamento> consultar = new ArrayList<BeanEquipamento>();
 
 		String sql = "select cliente.nome, equipamento.os, equipamento.descricao, equipamento.status"
-				+ " from equipamento" 
-				+ " inner join cliente" 
-				+ " ON equipamento.id_cliente = cliente.id_cliente"
+				+ " from equipamento" + " inner join cliente" + " ON equipamento.id_cliente = cliente.id_cliente"
 				+ " where equipamento.os = '" + os + "'";
 
 		PreparedStatement statement = connection.prepareStatement(sql);
@@ -102,48 +98,39 @@ public class DaoEquipamento {
 			return resultSet.getInt("qtd") <= 1;
 		}
 		return false;
-	}	
-	
-	/*public void alterarStatus(String os) {
-			
-			int valor = 0;
-			
-			if(valor <= 3) {
-				valor ++;
-				beanEquipamento.status_equip(valor);
-			}
-			
+	}
 
-		
-		try {
-			String sql = "update equipamento set = '"+ beanEquipamento.status_equip(valor)  + "' status where os = '" + os + "'";
-			PreparedStatement st = connection.prepareStatement(sql);
-			st.executeUpdate();
-			connection.commit();			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}*/
-
+	/*
+	 * public void alterarStatus(String os) {
+	 * 
+	 * int valor = 0;
+	 * 
+	 * if(valor <= 3) { valor ++; beanEquipamento.status_equip(valor); }
+	 * 
+	 * 
+	 * 
+	 * try { String sql = "update equipamento set = '"+
+	 * beanEquipamento.status_equip(valor) + "' status where os = '" + os + "'";
+	 * PreparedStatement st = connection.prepareStatement(sql); st.executeUpdate();
+	 * connection.commit(); } catch (Exception e) { e.printStackTrace(); } }
+	 */
 
 	public void delete(String os) {
-		
+
 		try {
-		String sql = "delete from equipamento where os = '" +  os + "'";
-		PreparedStatement statement = connection.prepareStatement(sql);
-		statement.execute();
-		connection.commit();
-		}catch (Exception e) {
+			String sql = "delete from equipamento where os = '" + os + "'";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.execute();
+			connection.commit();
+		} catch (Exception e) {
 			e.printStackTrace();
 			try {
 				connection.rollback();
-			} catch (SQLException e1) {				
+			} catch (SQLException e1) {
 				e1.printStackTrace();
 			}
 		}
-		
+
 	}
 
 }
-
-

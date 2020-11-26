@@ -26,10 +26,11 @@ public class Manutencao extends HttpServlet {
 			throws ServletException, IOException {		
 		
 		try {
+			
 		String acao = request.getParameter("acao");
 		String user = request.getParameter("user");
 		
-		String os = request.getParameter("os");
+//		String os = request.getParameter("os");
 		
 		if(acao.equalsIgnoreCase("delete")) {
 			daoEquipamento.delete(user);

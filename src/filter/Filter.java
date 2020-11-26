@@ -18,11 +18,13 @@ public class Filter implements javax.servlet.Filter {
 	
 	private static Connection connection;
 	
+	@Override
 	public void destroy() {
 		
 	}
 
 	
+	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)			
 			throws IOException, ServletException {
 		
@@ -39,7 +41,7 @@ public class Filter implements javax.servlet.Filter {
 		}
 	}
 
-	
+	@Override
 	public void init(FilterConfig fConfig) throws ServletException {
 		connection = SingleConnection.getConnection();
 	}
