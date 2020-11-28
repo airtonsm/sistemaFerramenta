@@ -27,6 +27,17 @@ public class Cliente extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		String acao = request.getParameter("acao");
+		String nome = request.getParameter("nome");
+		
+		if()
+		try {
+		RequestDispatcher view = request.getRequestDispatcher("/pesquisaCliente.jsp");	
+			request.setAttribute("cliente", daoCliente.buscarUsuario(nome));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 

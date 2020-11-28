@@ -2,11 +2,20 @@ package beans;
 
 public class BeanCliente {
 	
+	private Long id;
 	private String nome;
 	private String contato;
 	private String endereco;
 	private String cpf;
+	
+	
 
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getNome() {
 		return nome;
 	}

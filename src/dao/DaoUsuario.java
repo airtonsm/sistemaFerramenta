@@ -4,7 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
+import beans.BeanCliente;
+import beans.BeanEquipamento;
 import beans.BeanFerramenta;
 import connection.SingleConnection;
 
@@ -30,10 +34,13 @@ public class DaoUsuario {
 				connection.rollback();
 			} catch (SQLException e1) {
 				e1.printStackTrace();
+				
 			}
 		}
 				
 	}
+	
+
 	
 	public boolean validarLogin(String login) throws Exception{
 		String sql = "select count(1) as qtd from usuario where login  = '" + login + "'";

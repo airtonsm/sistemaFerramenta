@@ -1,7 +1,6 @@
 package servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,6 +19,7 @@ public class Usuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	private DaoUsuario daoUsuario = new DaoUsuario();
+	
    
     public Usuario() {
         super();       
@@ -28,6 +28,8 @@ public class Usuario extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		
 		
 	}
 

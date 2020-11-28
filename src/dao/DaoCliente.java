@@ -4,8 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import beans.BeanCliente;
+import beans.BeanEquipamento;
 import connection.SingleConnection;
 
 public class DaoCliente {
@@ -35,6 +38,24 @@ public class DaoCliente {
 			}
 		}
 	}	
+	
+	public List<BeanCliente> buscarUsuario(String nome) throws Exception {
+		
+		List<BeanCliente> buscarUsuario = new ArrayList<BeanCliente>();
+		
+		String sql = "select id_cliente, nome from cliente where nome ilike '%" + nome + "%'";
+		PreparedStatement st = connection.prepareStatement(sql);
+		ResultSet rs = st.executeQuery();
+		
+		while(rs.next()) {
+			BeanCliente cliente = new BeanEquipamento();
+			cliente.setId(rs.getLong("id"));
+			cliente.setNome(rs.getString("nome"));
+			buscarUsuario.add(cliente);
+		}
+		
+		return buscarUsuario;
+	}
 	
 	public boolean validarCliente(String cpf) throws Exception {
 		

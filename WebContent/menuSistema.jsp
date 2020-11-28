@@ -18,11 +18,13 @@ pageEncoding="ISO-8859-1"%>
             <img class="img" src="img/cliente.jpg" title="cadastro de clientes" width="120px" legth="120px">
              </a>
 
-            <a id="menuPrincipal" href="cadastroFerramenta.jsp" > 
+            <a id="cadastro de ferramentas" href="cadastroFerramenta.jsp" > 
             <img src="img/equipamento.png" width="120px" legth="120px" title="cadastro de Ferramentas">
-            </a>            
+            </a>    
+            
+            <a href="pesquisaCliente.jsp">Pesquisar Cliente</a>        
               
-            <a id="menuPrincipal" href="Manutencao?acao=listartodos">
+            <a id="Manutenção de ferramentas" href="Manutencao?acao=listartodos">
              <img src="img/manutencao.png" width="120px" legth="120px" title="Manutenção de Ferramentas">
              </a>
           </div>
