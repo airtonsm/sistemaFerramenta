@@ -22,7 +22,7 @@ pageEncoding="ISO-8859-1"%>
             <img src="img/equipamento.png" width="120px" legth="120px" title="cadastro de Ferramentas">
             </a>            
               
-            <a id="menuPrincipal" href="servicoFerramenta.jsp">
+            <a id="menuPrincipal" href="Manutencao?acao=listartodos">
              <img src="img/manutencao.png" width="120px" legth="120px" title="Manutenção de Ferramentas">
              </a>
           </div>

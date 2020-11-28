@@ -100,20 +100,18 @@ public class DaoEquipamento {
 		return false;
 	}
 
-	/*
-	 * public void alterarStatus(String os) {
-	 * 
-	 * int valor = 0;
-	 * 
-	 * if(valor <= 3) { valor ++; beanEquipamento.status_equip(valor); }
-	 * 
-	 * 
-	 * 
-	 * try { String sql = "update equipamento set = '"+
-	 * beanEquipamento.status_equip(valor) + "' status where os = '" + os + "'";
-	 * PreparedStatement st = connection.prepareStatement(sql); st.executeUpdate();
-	 * connection.commit(); } catch (Exception e) { e.printStackTrace(); } }
-	 */
+	
+	public void alterarStatus(String os) {
+
+		try {
+			//String sql = "update equipamento set = '" + beanEquipamento.status_equip(valor) + "' status where os = '"
+				//	+ os + "'";
+			connection.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 
 	public void delete(String os) {
 

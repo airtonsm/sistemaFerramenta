@@ -14,7 +14,8 @@ import dao.DaoEquipamento;
 @WebServlet("/Manutencao")
 public class Manutencao extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	
+	DaoEquipamento equipamento = new DaoEquipamento();
 	DaoEquipamento daoEquipamento = new DaoEquipamento();
 
 	public Manutencao() {
@@ -25,6 +26,8 @@ public class Manutencao extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		
 
 		try {
 
@@ -39,23 +42,27 @@ public class Manutencao extends HttpServlet {
 				request.setAttribute("msg", "Usuário deletado com sucesso!!!");
 				view.forward(request, response);
 			}
+			else if(acao.equalsIgnoreCase("listartodos")) {
+				RequestDispatcher view = request.getRequestDispatcher("/servicoFerramenta.jsp");
+				request.setAttribute("equipamento", equipamento.listar());
+				view.forward(request, response);
+				}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+			throws ServletException, IOException {		
 
 		String os = request.getParameter("os");
+		
+		try {		
 
-		DaoEquipamento equipamento = new DaoEquipamento();
-
-			try {
-
-				RequestDispatcher view = request.getRequestDispatcher("/servicoFerramenta.jsp");
-				request.setAttribute("equipamento", equipamento.consultar(os));
-				view.forward(request, response);
+			RequestDispatcher view1 = request.getRequestDispatcher("/servicoFerramenta.jsp");
+			request.setAttribute("equipamento", equipamento.consultar(os));
+			view1.forward(request, response);
 
 			} catch (Exception e) {
 

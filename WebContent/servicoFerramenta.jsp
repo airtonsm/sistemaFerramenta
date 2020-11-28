@@ -48,11 +48,12 @@ prefix="c"%>
 						<td><a href="">Iniciar/Finalizar</a></td>
 
 						<td><a href="Manutencao?acao=delete&user=${user.os}">Excluir</a></td>
-
 					</tr>
 				</c:forEach>
 
-			</table>       
+			</table>   
+			
+			<h3 style="color: orange;">${msg}</h3>    
            
        <br /><br />
           <a  href= "cadastroCliente.jsp">Cadastrar Cliente</a>
