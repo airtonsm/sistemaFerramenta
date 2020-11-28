@@ -45,7 +45,7 @@ pageEncoding="ISO-8859-1"%>
           
          <br /><br />
           <a href= "cadastroCliente.jsp">Cadastrar Cliente</a>
-           <a href= "servicoFerramenta.jsp">Manutenção Ferramenta</a>
+           <a href= "Manutencao?acao=listartodos">Manutenção Ferramenta</a>
 
        </form>
       </div>

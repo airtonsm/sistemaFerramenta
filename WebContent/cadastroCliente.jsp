@@ -37,7 +37,7 @@
 					type="submit" value="CADASTRAR" /> <br /> <br /> 
 					
 					<a href="cadastroFerramenta.jsp">Cadastrar Ferramenta</a>
-					<a	href="servicoFerramenta.jsp">Manutencao Ferramenta</a>
+					<a	href="Manutencao?acao=listartodos">Manutencao Ferramenta</a>
 
 			</form>
 		</div>
