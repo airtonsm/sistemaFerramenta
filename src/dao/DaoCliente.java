@@ -49,7 +49,7 @@ public class DaoCliente {
 		
 		while(rs.next()) {
 			BeanCliente cliente = new BeanEquipamento();
-			cliente.setId(rs.getLong("id"));
+			cliente.setId(rs.getLong("id_cliente"));
 			cliente.setNome(rs.getString("nome"));
 			buscarUsuario.add(cliente);
 		}

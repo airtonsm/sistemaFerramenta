@@ -31,10 +31,10 @@ public class Cliente extends HttpServlet {
 		String acao = request.getParameter("acao");
 		String nome = request.getParameter("nome");
 		
-		if()
 		try {
-		RequestDispatcher view = request.getRequestDispatcher("/pesquisaCliente.jsp");	
+		RequestDispatcher view = request.getRequestDispatcher("pesquisaCliente.jsp");	
 			request.setAttribute("cliente", daoCliente.buscarUsuario(nome));
+			view.forward(request, response);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

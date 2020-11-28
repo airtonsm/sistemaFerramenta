@@ -11,10 +11,10 @@ prefix="c"%>
   <body>
     <div class="background">
       <div class="container">
-        <h1>Pesquisar Ferramenta</h1>
+        <h1>Pesquisar Cliente</h1>
         <br /><br />
 
-			<form action="salvarCliente" method="post">
+			<form action="Cliente" method="get">
 				<input placeholder="Nome do Cliente " class="inputs" type="text"
 					id="nome" name="nome" /> 
 				
